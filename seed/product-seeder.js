@@ -6,9 +6,9 @@ mongoose.connect('mongodb://localhost:27017/shopping', { useMongoClient: true })
 
 var products = [
   new Product({
-    imagePath: 'https://buildahead.com/wp-content/uploads/2017/02/happy-emoji-smaller.png',
-    title: 'Happy',
-    description: "Happy sticker!",
+    imagePath: 'https://globalassets.starbucks.com/assets/0aec516c617c4df7904452542ab706b6.jpg',
+    title: 'latte',
+    description: "dark, rich espresso balanced with steamed milk"
     price: 5.5
   }),
   new Product({
