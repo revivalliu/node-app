@@ -1,4 +1,4 @@
-# Stickerfy
+# CoffeeShop
 
 
 ### Run the application locally
