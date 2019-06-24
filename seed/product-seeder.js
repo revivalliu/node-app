@@ -7,20 +7,20 @@ mongoose.connect('mongodb://localhost:27017/shopping', { useMongoClient: true })
 var products = [
   new Product({
     imagePath: 'https://globalassets.starbucks.com/assets/0aec516c617c4df7904452542ab706b6.jpg',
-    title: 'latte',
-    description: "dark, rich espresso balanced with steamed milk",
+    title: 'Latte',
+    description: "Dark, rich espresso",
     price: 5.5
   }),
   new Product({
-    imagePath: 'https://cdn.shopify.com/s/files/1/1061/1924/products/Very_Angry_Emoji_7f7bb8df-d9dc-4cda-b79f-5453e764d4ea_large.png?v=1480481058',
-    title: 'Angry',
-    description: "Angry sticker",
+    imagePath: 'https://globalassets.starbucks.com/assets/b0525676a0194652be7f4993210b381a.jpg',
+    title: 'Espresso',
+    description: "Espresso Roast",
     price: 4.5
   }),
   new Product({
-    imagePath: 'https://cdn.shopify.com/s/files/1/1061/1924/products/Emoji_Icon_-_Sad_Emoji_large.png?v=1513251055',
-    title: 'Sad',
-    description: "Sad sticker",
+    imagePath: 'https://globalassets.starbucks.com/assets/7e2d6987b7404f13ab8eae0b2712dde9.jpg',
+    title: 'Mocha',
+    description: "Bittersweet Mocha",
     price: 7
   })
 ];
