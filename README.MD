@@ -7,7 +7,7 @@ You need [Node](https://nodejs.org/en/download/), [NPM](https://www.npmjs.com/ge
 To get started:
 1. Clone this repository
 ``` shell
-    git clone https://github.com/meaghanlewis/stickerfy.git
+    git clone https://github.com/revivalliu/node-app.git
 ```
 
 2. Install dependencies
