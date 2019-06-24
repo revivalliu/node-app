@@ -8,7 +8,7 @@ var products = [
   new Product({
     imagePath: 'https://globalassets.starbucks.com/assets/0aec516c617c4df7904452542ab706b6.jpg',
     title: 'latte',
-    description: "dark, rich espresso balanced with steamed milk"
+    description: "dark, rich espresso balanced with steamed milk",
     price: 5.5
   }),
   new Product({
