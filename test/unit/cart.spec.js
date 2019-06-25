@@ -13,24 +13,24 @@ describe('Shopping cart', function() {
       cart = new Cart({});
       product = new Product({
         "imagePath": "https://buildahead.com/wp-content/uploads/2017/02/happy-emoji-smaller.png",
-        "title": "Happy",
+        "title": "Latte",
         "description": "Happy",
         "price":5});
     });
 
-    it('adds a sticker to the cart', function() {
+    it('adds a coffee to the cart', function() {
       cart.add(product, product.id);
       assert.equal(cart.totalPrice, 5);
     });
 
-    it('removes a sticker from the cart', function() {
+    it('removes a coffee from the cart', function() {
       cart.add(product, product.id);
       cart.reduceByOne(product.id);
       assert.deepEqual(cart.items, {});
       assert.equal(cart.totalPrice, 0);
     });
 
-    it('remove all quantities of sticker from the cart', function() {
+    it('remove all quantities of coffee from the cart', function() {
       cart.add(product, product.id);
       cart.add(product, product.id);
       cart.removeItem(product.id);
