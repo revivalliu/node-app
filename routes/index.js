@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
       productChunks.push(docs.slice(i, i + chunkSize));
     }
     res.render('shop/index', {
-      title: 'Stickers',
+      title: 'Coffee',
       products: productChunks,
       successMsg: successMsg,
       noMessages: !successMsg
