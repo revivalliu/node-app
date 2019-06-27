@@ -1,4 +1,5 @@
 require('chromedriver');
+require('selenium-webdriver/chrome');
 const assert = require('assert');
 const {Builder, By} = require('selenium-webdriver');
 var capabilities = Builder.Capabilities.chromedriver();
