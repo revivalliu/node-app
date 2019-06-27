@@ -1,7 +1,7 @@
 require('chromedriver');
 const assert = require('assert');
 const {Builder, By} = require('selenium-webdriver');
-var capabilities = Builder.Capabilities.chrome();
+var capabilities = Builder.Capabilities.chromedriver();
 capabilities.set('chromeOptions',{
 'args': ['--headless', '--no-sandbox']
 })
