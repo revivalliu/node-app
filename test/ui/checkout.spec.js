@@ -1,12 +1,15 @@
 require('chromedriver');
 const assert = require('assert');
 const {Builder, By} = require('selenium-webdriver');
-
+var capabilities = selenium.Capabilities.chrome();
+capabilities.set('chromeOptions',{
+'args': ['--headless', '--no-sandbox']
+})
 describe('Checkout workflow', function() {
   let driver;
 
   before(async function() {
-    driver = await new Builder().forBrowser('chrome').build();
+    driver = await new Builder().forBrowser('chrome').withCapabilities(capabilities).build();
   });
 
   it('adds a coffee to the cart and checks out', async function() {
