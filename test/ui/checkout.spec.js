@@ -10,12 +10,6 @@ describe('Checkout workflow', function() {
   before(async function() {
     driver = await new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().headless()).build();
   });
-  
-  driver.get('http://www.google.com/ncr');
-  driver.findElement(By.name('q')).sendKeys('webdriver');
-  driver.findElement(By.name('btnK')).click();
-  driver.wait(until.titleIs('webdriver - Google Search'), 1000);
-  driver.quit();
 
   it('adds a coffee to the cart and checks out', async function() {
 	  driver.get('http://www.google.com/ncr');
