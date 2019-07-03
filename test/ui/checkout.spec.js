@@ -4,19 +4,27 @@
 //const assert = require('assert');
 //const {Builder, By} = require('selenium-webdriver');
 
-const {Builder, By, Key, until} = require('selenium-webdriver');
- 
-(async function example() {
-  let driver = await new Builder().forBrowser('firefox').build();
-  try {
-    await driver.get('http://www.google.com/ncr');
-    await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
-    await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
-  } finally {
-    await driver.quit();
-  }
-})();
+const {Builder, By, until} = require('selenium-webdriver');
+const test = require('selenium-webdriver/testing');
 
+describe('Google Search', function() {
+  let driver;
+
+  test.before(function() {
+    driver = new Builder().forBrowser('firefox').build();
+  });
+
+  test.it('example', function theTestFunction() {
+    driver.get('http://www.google.com/ncr');                          // (1)
+    driver.findElement(By.name('q')).sendKeys('webdriver');           // (2)
+    driver.findElement(By.name('btnK')).click();                      // (3)
+    driver.wait(until.titleIs('webdriver - Google Search'), 1000);    // (4)
+  });
+
+  test.after(function() {
+    driver.quit();
+  });
+});
 //describe('Checkout workflow', function() {
 //  let driver;
 
