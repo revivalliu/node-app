@@ -10,7 +10,7 @@ const test = require('selenium-webdriver/testing');
 describe('Google Search', function() {
   let driver;
 
-  test.before(function() {
+  before(function() {
     driver = new Builder().forBrowser('chrome').build();
   });
 
