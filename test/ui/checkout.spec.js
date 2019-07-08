@@ -11,7 +11,7 @@ describe('Google Search', function() {
   let driver;
 
   test.before(function() {
-    driver = new Builder().forBrowser('firefox').build();
+    driver = new Builder().forBrowser('chrome').build();
   });
 
   test.it('example', function theTestFunction() {
