@@ -14,14 +14,14 @@ describe('Google Search', function() {
     driver = new Builder().forBrowser('chrome').build();
   });
 
-  test.it('example', function theTestFunction() {
+  it('example', function theTestFunction() {
     driver.get('http://www.google.com/ncr');                          // (1)
     driver.findElement(By.name('q')).sendKeys('webdriver');           // (2)
     driver.findElement(By.name('btnK')).click();                      // (3)
     driver.wait(until.titleIs('webdriver - Google Search'), 1000);    // (4)
   });
 
-  test.after(function() {
+  after(function() {
     driver.quit();
   });
 });
